@@ -1,0 +1,11 @@
+{% extends 'index.html' %}
+{% block titulo %} Formulario Personas {% endblock titulo %}
+{% load static %}
+{% block cuerpo %}
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit">Crear o Editar</button>
+        <img src='{% static "imagenes/foto2.jpg" %}' alt="">
+    </form>
+{% endblock cuerpo %}
